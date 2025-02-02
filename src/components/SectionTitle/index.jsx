@@ -9,5 +9,3 @@ export default function SectionTitle({ title, black, balance }) {
         </div>
     )
 }
-
-

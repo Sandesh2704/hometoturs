@@ -14,6 +14,9 @@ body {
   font-family: Poppins, sans-serif;
 }
 
+p{
+  color: #4b5563;
+}
 
 .border-text {
   color: black;

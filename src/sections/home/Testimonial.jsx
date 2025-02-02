@@ -1,50 +1,137 @@
+// 'use client'
+
+// import Image from 'next/image'
+// import Slider from 'react-slick'
+// import PaddingX from '@/components/PaddingX';
+// import SectionTitle from '@/components/SectionTitle'
+// import { FaStar } from 'react-icons/fa'
+// import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+// import "slick-carousel/slick/slick.css"
+// import "slick-carousel/slick/slick-theme.css"
+// import Section from '@/components/Section';
+// import testimonials from '@/deta/testimonials';
+
+// function SampleNextArrow(props) {
+//   const { onClick } = props
+//   return (
+//     <button
+//       onClick={onClick}
+//       className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white/50 hover:text-white transition-colors"
+//       aria-label="Next slide"
+//     >
+//       <IoIosArrowForward className="w-8 h-8" />
+//     </button>
+//   )
+// }
+
+// function SamplePrevArrow(props) {
+//   const { onClick } = props
+//   return (
+//     <button
+//       onClick={onClick}
+//       className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white/50 hover:text-white transition-colors"
+//       aria-label="Previous slide"
+//     >
+//       <IoIosArrowBack className="w-8 h-8" />
+//     </button>
+//   )
+// }
+
+// export default function TestimonialSlider() {
+//   const settings = {
+//     dots: false,
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     nextArrow: <SampleNextArrow />,
+//     prevArrow: <SamplePrevArrow />,
+//     autoplay: true,
+//     autoplaySpeed: 5000,
+//   }
+
+//   return (
+//     <>
+//       <Section color="black">
+//         <div className="flex justify-center">
+//           <div className="w-[40rem] text-center">
+//             <SectionTitle title="Discover what our students say about us" balance={true} />
+//           </div>
+//         </div>
+//         <div className="relative flex justify-center bg-cover bg-center" >
+
+//           <div className="absolute inset-0 m-auto w-96 h-96 bg-[#2EC4B652] blur-[220px]" />
+
+//           <div className="max-w-5xl mx-auto mt-10"  >
+//             <Slider {...settings}>
+//               {testimonials.map((testimonial, index) => (
+//                 <div key={index} className="px-20 py-5">
+//                   <div className="flex flex-col md:flex-row items-center gap-12">
+//                     <div className=" relative py-7 px-3 rounded-2xl border-2  -rotate-6 border-[#2EC4B6]">
+//                       <Image
+//                         height={400}
+//                         width={300}
+//                         priority
+//                         src={testimonial.image}
+//                         alt={testimonial.name}
+//                         className="rounded-lg object-cover w-[316px] h-[254px]"
+//                       />
+
+//                       <div className='flex text-center flex-col mt-4'>
+//                         <h3 className="text-white text-xl font-semibold">
+//                           {testimonial.name}
+//                         </h3>
+//                         <span className="text-gray-400 text-base mt-1">
+//                           {testimonial.role}
+//                         </span>
+
+//                         <div className="flex items-center gap-1 mt-2 justify-center">
+//                           {[...Array(testimonial.rating)].map((_, i) => (
+//                             <span className='text-yellow-400 text-lg' key={i}> <FaStar /></span>
+//                           ))}
+//                         </div>
+//                       </div>
+
+//                     </div>
+//                     <div className="flex-1 px-3">
+//                       <p className="text-white text-2xl leading-[2rem] ">
+//                         {testimonial.quote}
+//                       </p>
+//                     </div>
+//                   </div>
+//                 </div>
+//               ))}
+//             </Slider>
+//           </div>
+//         </div>
+//       </Section>
+//     </>
+//   )
+// }
+
+
 'use client'
 
 import Image from 'next/image'
 import Slider from 'react-slick'
-import PaddingX from '@/components/PaddingX';
-import SectionTitle from '@/components/SectionTitle'
 import { FaStar } from 'react-icons/fa'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import Section from '@/components/Section'
+import SectionTitle from '@/components/SectionTitle'
+import testimonials from '@/deta/testimonials'
 
-const testimonials = [
-   {
-     id:1,
-    name: 'Joshua Enith',
-    role: 'Student',
-    image: '/assests/testmonials/b08ed33d47db4b9049c21f94a74a01ab.jpg',
-    quote: 'Finding the right tutor for my child was such a relief. The personalized sessions have improved not only their grades but also their confidence. Highly recommended!',
-    rating: 5
-  },
-  {
-    id:2,
-    name: 'Joshua Enith',
-    role: 'Student',
-    image: '/assests/testmonials/b08ed33d47db4b9049c21f94a74a01ab.jpg',
-    quote: 'Finding the right tutor for my child was such a relief. The personalized sessions have improved not only their grades but also their confidence. Highly recommended!',
-    rating: 5
-  },
-  {
-    id:3,
-    name: 'Joshua Enith',
-    role: 'Student',
-    image: '/assests/testmonials/b08ed33d47db4b9049c21f94a74a01ab.jpg',
-    quote: 'Finding the right tutor for my child was such a relief. The personalized sessions have improved not only their grades but also their confidence. Highly recommended!',
-    rating: 5
-  }
-]
 
 function SampleNextArrow(props) {
   const { onClick } = props
   return (
     <button
       onClick={onClick}
-      className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white/50 hover:text-white transition-colors"
+      className="absolute -right-2 md:right-0 top-1/2 -translate-y-1/2 z-10 text-white/50 hover:text-white transition-colors"
       aria-label="Next slide"
     >
-      <IoIosArrowForward className="w-8 h-8" />
+      <IoIosArrowForward className="text-2xl md:text-3xl xl:text-5xl" />
     </button>
   )
 }
@@ -54,15 +141,15 @@ function SamplePrevArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white/50 hover:text-white transition-colors"
+      className="absolute -left-2 md:left-0 top-1/2 -translate-y-1/2 z-10 text-white/50 hover:text-white transition-colors"
       aria-label="Previous slide"
     >
-      <IoIosArrowBack className="w-8 h-8" />
+      <IoIosArrowBack className="text-2xl md:text-3xl xl:text-5xl" />
     </button>
   )
 }
 
-export default function TestimonialSlider() {
+export default function Testimonial() {
   const settings = {
     dots: false,
     infinite: true,
@@ -76,60 +163,53 @@ export default function TestimonialSlider() {
   }
 
   return (
-          <section className="bg-black text-white py-16 ">
-        <PaddingX>
-          <div className="flex justify-center">
-            <div className="w-[40rem] text-center">
-              <SectionTitle title="Discover what our students say about us" balance={true} />
-            </div>
-          </div>
-          <div  className="relative flex justify-center bg-cover bg-center" >
-
-          <div className="absolute inset-0 m-auto w-96 h-96 bg-[#2EC4B652] blur-[220px]" />
-
-    <div className="max-w-5xl mx-auto mt-10"  >
-      <Slider {...settings}>
-        {testimonials.map((testimonial, index) => (
-          <div key={testimonial.id} className="px-20 py-5">
-            <div className="flex flex-col md:flex-row items-center gap-12">
-              <div className=" relative py-7 px-3 rounded-2xl border-2  -rotate-6 border-[#2EC4B6]">
-                       <Image
-                        height={400}
-                        width={300}
-                        priority
-                        src={testimonial.image }
-                        alt={testimonial.name}
-                        className="rounded-lg object-cover w-[316px] h-[254px]"
-                      />
-
-                      <div className='flex text-center flex-col mt-4'>
-                        <h3 className="text-white text-xl font-semibold">
-                        {testimonial.name}
-                        </h3>
-                        <span className="text-gray-400 text-base mt-1">
-                        {testimonial.role}
-                        </span>
-
-                        <div className="flex items-center gap-1 mt-2 justify-center">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <span className='text-yellow-400 text-lg' key={i}> <FaStar/></span>
-                          ))}
-                        </div>
+    <Section color="black">
+      <div className="flex justify-center">
+        <div className="w-full sm:w-[40rem] text-center">
+          <SectionTitle title="Discover what our students say about us" balance={true} />
+        </div>
+      </div>
+      <div className="relative flex justify-center bg-cover bg-center overflow-hidden">
+        <div className="absolute inset-0 m-auto w-96 h-96 bg-[#2EC4B652] blur-[220px]" />
+        <div className="w-full xl:w-[75%] mx-auto mt-10">
+          <Slider {...settings}>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="px-5 md:px-10 xl:px-24 py-5">
+                <div className="flex flex-col md:flex-row items-center gap-6 lg:gap-12">
+                  <div className="relative py-7 px-3 rounded-2xl border-2 border-[#2EC4B6] md:-rotate-3 lg:-rotate-6">
+                    <Image
+                      height={400}
+                      width={300}
+                      priority
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="rounded-lg object-cover w-full md:w-[316px] h-40 md:h-52 lg:h-[254px]"
+                    />
+                    <div className="flex text-center flex-col mt-4">
+                      <h3 className="text-white text-xl font-semibold">{testimonial.name}</h3>
+                      <span className="text-gray-400 text-base mt-1">{testimonial.role}</span>
+                      <div className="flex items-center gap-1 mt-2 justify-center">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <span className="text-yellow-400 text-base md:text-lg" key={i}><FaStar /></span>
+                        ))}
                       </div>
 
+                      
                     </div>
-              <div className="flex-1 px-3">
-                <p className="text-white text-2xl leading-[2rem] ">
-                  {testimonial.quote}
-                </p>
+
+                    <div className="flex md:hidden px-3 mt-4">
+                    <p className="text-white text-sm sm:text-base sm:leading-[2rem]">{testimonial.quote}</p>
+                  </div>
+                  </div>
+                  <div className="hidden md:flex flex-1 px-5 md:px-3">
+                    <p className="text-white text-lg lg:text-xl xl:text-2xl sm:leading-[2rem] ">{testimonial.quote}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
-    </div>
-    </PaddingX>
-  </section>
+            ))}
+          </Slider>
+        </div>
+      </div>
+    </Section>
   )
 }
