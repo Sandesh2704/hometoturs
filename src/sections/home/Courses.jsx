@@ -23,16 +23,16 @@ export default function Courses() {
                         <div className="relative rounded-3xl flex flex-col overflow-hidden w-full bg-white py-9  px-4 border border-[#011627]"
                             key={index}
                             data-aos="zoom-in"
-                            data-aos-delay={index * 200}
+                            data-aos-delay={index * 100}
                             data-aos-once="false">
                             <div className="flex flex-col lg:h-[350px]">
                                 <span className="text-[#011627BF] font-medium text-xl ">{items.instructor}</span>
-                                <div className="font-semibold text-2xl leading-9 w-80 mt-2">{items.title}</div>
+                                <div className="font-semibold text-2xl leading-9 md:w-80 mt-2">{items.title}</div>
                                 <p className="mt-2 text-lg leading-[1.8rem] text-black/75"> {items.description}</p>
-                                <span className="text-5xl lg:text-6xl font-semibold border-text my-5">{items.instructor2}</span>
+                                <span className="text-5xl lg:text-6xl font-semibold border-text my-6">{items.instructor2}</span>
                             </div>
 
-                            <div className="flex flex-col">
+                            <div className="flex flex-col mt-2">
                                 <h1 className="text-black text-4xl font-semibold">${items.price}</h1>
                                 <button className="mt-6">
                                     <Button title="Enroll" />

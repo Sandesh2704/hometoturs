@@ -6,7 +6,7 @@ const courses = [
         price: '50',
         instructor2: 'Joshua Enith',
         img: '/assests/courses/52ad9022dd097bd74e08523d802aaa5e.png',
-        imgClass: "w-60 md:w-96  md:h-96 -bottom-8 -right-20"
+        imgClass: "w-60 md:w-96  md:h-96 -bottom-8 -right-10 lg:-right-20"
     },
     {
         title: 'Science Simplified for Young Minds',
@@ -14,7 +14,7 @@ const courses = [
         description: 'Discover the wonders of science with hands-on learning and engaging explanations. This course covers key concepts in biology, chemistry, and physics, tailored to each student’s level.',
         price: '50',
         img: '/assests/courses/493e45b9a4565571115f40c08b3d5150.png',
-        imgClass: "w-96 h-96 -bottom-20 -right-12",
+        imgClass: "w-96 h-96 -bottom-20 -right-14 lg:-right-12",
         instructor2: 'Mickie FAsh',
     },
     {
