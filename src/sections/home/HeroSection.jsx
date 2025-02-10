@@ -162,6 +162,7 @@ export default function HeroSection() {
                         <h1 
                             className="text-4xl leading-[54px] font-bold mb-2 text-balance"
                              data-aos="fade-up"
+                             data-aos-once="true" 
                         >
                             Elevate your child's learning experience with our professional home tuition services.
                         </h1>
@@ -171,6 +172,7 @@ export default function HeroSection() {
                             className="text-lg lg:text-xl leading-[1.8rem] lg:leading-[2rem] font-normal text-[#0A0A0A]/75 mb-8"
                             data-aos="fade-up"
                             data-aos-delay="200"
+                            data-aos-once="true" 
                         >
                             Say goodbye to academic struggles and confusion. Our professional tutors ensure a personalized learning experience, empowering your child to excel every day.
                         </p>
@@ -179,6 +181,7 @@ export default function HeroSection() {
                             className="flex items-center space-x-6"
                             data-aos="fade-right"
                             data-aos-delay="400"
+                            data-aos-once="true" 
                         >
                             <Link href="/signin">
                                 <Button title="Sign In" bgGreen={true} />
@@ -188,7 +191,6 @@ export default function HeroSection() {
                             </Link>
                         </div>
 
-                        {/* Stats Section */}
                         <div 
                             className="flex flex-wrap justify-center md:justify-start gap-3.5 mt-12"
                         >
@@ -216,6 +218,7 @@ export default function HeroSection() {
                             height={1000}
                             priority
                             data-aos="fade-left"
+                            data-aos-once="true" 
                         />
                         <div className="grid grid-cols-2 gap-3 md:gap-4">
                             <Image
@@ -227,6 +230,7 @@ export default function HeroSection() {
                                 priority
                                 data-aos="fade-up"
                                 data-aos-delay="200"
+                                data-aos-once="true" 
                             />
                             <Image
                                 src="/assests/heroSection/ca7b69c39f5863c6d90999b27501e9f4.png"
@@ -237,6 +241,7 @@ export default function HeroSection() {
                                 priority
                                 data-aos="fade-up"
                                 data-aos-delay="400"
+                                data-aos-once="true" 
                             />
                         </div>
                     </div>
@@ -272,6 +277,7 @@ export default function HeroSection() {
                                     className="rounded-3xl object-cover w-full h-full"
                                     data-aos="fade-up"
                                     data-aos-delay="200"
+                                    data-aos-once="true" 
                                 />
                                 <Image
                                     src="/assests/heroSection/c12c7f59a8a354143d29f7ed1349f148.jpg"
@@ -282,6 +288,7 @@ export default function HeroSection() {
                                     className="rounded-3xl object-cover w-full lg:h-full"
                                     data-aos="fade-up"
                                     data-aos-delay="300"
+                                    data-aos-once="true" 
                                 />
                             </div>
                         </div>
@@ -290,6 +297,8 @@ export default function HeroSection() {
                         <div 
                             className="px-6 py-12 border border-[#01162780] h-full rounded-[32px] order-first lg:order-last"
                             data-aos="fade-left"
+                            data-aos-duration="500"
+                            data-aos-once="true" 
                         >
                             <h1 className="text-4xl leading-[3.3rem] font-[600] mb-3 pr-5">
                                 Our platform provides a wide range of online courses for you to discover.
