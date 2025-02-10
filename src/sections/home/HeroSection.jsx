@@ -17,15 +17,15 @@ export default function HeroSection() {
     return (
         <>
             <Section>
-                <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
+                <div className="grid lg:grid-cols-2 gap-14 mt-2">
                     <div className="md:pr-10">
-                        <h1 className="text-4xl leading-[3rem]  font-bold mb-5 text-balance">
+                        <h1 className="text-4xl leading-[54px]  font-bold mb-2 text-balance">
                             Elevate your child's learning experience with our professional home tuition services.
                         </h1>
-                        <p className="text-lg lg:text-xl leading-[1.8rem] lg:leading-[2rem]  mb-6">
+                        <p className="text-lg lg:text-xl leading-[1.8rem] lg:leading-[2rem] font-normal text-[#0A0A0A]/75  mb-8">
                             Say goodbye to academic struggles and confusion. Our professional tutors ensure a personalized learning experience, empowering your child to excel every day.
                         </p>
-                        <div className="flex items-center  space-x-4">
+                        <div className="flex items-center  space-x-6">
                             <Link href="/signin">
                                 <Button title="Sign In" bgGreen={true} />
                             </Link>
@@ -35,99 +35,95 @@ export default function HeroSection() {
                             </Link>
                         </div>
 
-
-                        <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-10">
+                        <div className="flex flex-wrap justify-center md:justify-start gap-3.5 mt-12">
                             {stats.map((items, index) => (
-                                <div key={index} className={`text-center ${items.bg} py-5 px-8 border rounded-2xl`}>
-                                    <h6 className={`text-base mb-3 ${items.text}`}>{items.label}</h6>
-                                    <h3 className="text-3xl md:text-4xl font-bold">{items.value}</h3>
+                                <div key={index} className={`text-center ${items.bg} py-[19px] px-[34px] border border-[#011627]/30 rounded-3xl`}>
+                                    <h6 className={`text-xl font-normal mb-4 ${items.text}`}>{items.label}</h6>
+                                    <h3 className="text-3xl md:text-4xl font-semibold">{items.value}</h3>
                                 </div>
                             ))}
                         </div>
                     </div>
 
-
-                    <div className="grid md:grid-cols-2 gap-2 md:gap-4">
-
+                    <div className="flex flex-col gap-4 md:gap-6">
                         <Image
                             src="/assests/heroSection/00bec2872c1d0f42d1c3565a5995a521.png"
                             alt="Main Teacher"
-                            className="rounded-2xl  h-[320px] object-cover col-span-2"
+                            className="rounded-3xl  h-[364px] object-cover "
                             width={1000}
                             height={1000}
                             priority
                         />
-
-                        <Image
-                            src="/assests/heroSection/6fb32429b68ae24ea78c4bb8bb1a3cf1.png"
-                            alt="Teacher 1"
-                            className="rounded-2xl  h-[170px] object-cover"
-                            width={1000}
-                            height={1000}
-                            priority
-                        />
-                        <Image
-                            src="/assests/heroSection/ca7b69c39f5863c6d90999b27501e9f4.png"
-                            alt="Teacher 2"
-                            className="rounded-2xl h-[170px] object-cover"
-                            width={1000}
-                            height={1000}
-                            priority
-                        />
-                    </div>
-                </div>
-
-
-                <div className="grid lg:grid-cols-2 gap-7 pt-16 bg-white">
-
-
-                    <div className="grid grid-cols-2 h-fit gap-2 md:gap-4 order-last lg:order-first">
-
-                        <Image
-                            src="/assests/heroSection/8c4d92e9786756077e88b423410795d3.jpg"
-                            alt="Main Teacher"
-                            className="rounded-2xl object-cover w-full h-[400px] md:h-full row-span-2"
-                            width={900}
-                            height={900}
-                            priority
-                        />
-
-
-                        <div className="flex flex-col gap-2 md:gap-4 h-full">
+                        <div className="grid grid-cols-2 gap-3 md:gap-4">
                             <Image
-                                src="/assests/heroSection/d035daee1752e70310c09850f74d9617.jpg"
+                                src="/assests/heroSection/6fb32429b68ae24ea78c4bb8bb1a3cf1.png"
                                 alt="Teacher 1"
-                                className="rounded-2xl object-cover w-full min-h-[195px] lg:h-full flex-1"
+                                className="rounded-3xl  h-[172px] object-cover"
                                 width={1000}
                                 height={1000}
                                 priority
                             />
                             <Image
-                                src="/assests/heroSection/c12c7f59a8a354143d29f7ed1349f148.jpg"
+                                src="/assests/heroSection/ca7b69c39f5863c6d90999b27501e9f4.png"
                                 alt="Teacher 2"
-                                className="rounded-2xl object-cover w-full min-h-[195px] lg:h-full flex-1"
+                                className="rounded-3xl h-[172px] object-cover"
                                 width={1000}
                                 height={1000}
                                 priority
                             />
-                        </div>
-                    </div>
-
-                    <div className="px-6 h-full border border-[#01162780]  rounded-[32px]">
-                        <h1 className="text-4xl leading-[3.2rem]  font-[600] mb-5">
-                            Our platform provides a wide range of online courses for you to discover.
-                        </h1>
-                        <p className="text-lg lg:text-xl leading-[1.8rem] lg:leading-[2rem]  mb-6">
-                            Unlock limitless learning opportunities on our platform with a wide variety of online courses. Dive into
-                            different topics and grow your skills at your own pace.       </p>
-                        <div className="flex items-center  space-x-4">
-                            <Link href="/learn" className='hidden md:flex'>
-                                <Button title="Learn More" />
-                            </Link>
                         </div>
                     </div>
                 </div>
             </Section>
+
+            <div className='mt-5'>
+                <Section>
+                    <div className="grid lg:grid-cols-2 gap-5 bg-white">
+                        <div className="grid grid-cols-2 gap-x-2 md:gap-x-4 order-last md:order-first">
+                            <Image
+                                className="col-span-1 row-span-2 rounded-3xl object-cover w-full h-[486px]"
+                                src="/assests/heroSection/8c4d92e9786756077e88b423410795d3.jpg"
+                                alt="Main Teacher"
+                                width={900}
+                                height={900}
+                                priority
+                            />
+                            <div className='flex flex-col gap-y-2 md:gap-y-2.5  h-[486px]'>
+                                <Image
+                                    src="/assests/heroSection/d035daee1752e70310c09850f74d9617.jpg"
+                                    alt="Teacher 1"
+                                    width={1000}
+                                    height={1000}
+                                    priority
+                                    className="rounded-3xl object-cover w-full h-full"
+                                />
+                                <Image
+                                    src="/assests/heroSection/c12c7f59a8a354143d29f7ed1349f148.jpg"
+                                    alt="Teacher 2"
+                                    width={1000}
+                                    height={1000}
+                                    priority
+                                    className="rounded-3xl object-cover w-full h-full"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="px-6 py-12 border border-[#01162780] h-full  rounded-[32px] order-first md:order-last">
+                            <h1 className="text-4xl leading-[3.3rem]  font-[600] mb-3 pr-5">
+                                Our platform provides a wide range of online courses for you to discover.
+                            </h1>
+                            <p className="text-lg lg:text-xl leading-[1.8rem] lg:leading-[2rem]  mb-7">
+                                Unlock limitless learning opportunities on our platform with a wide variety of online courses. Dive into
+                                different topics and grow your skills at your own pace.       </p>
+                            <div className="flex items-center">
+                                <Link href="/learn">
+                                    <Button title="Learn More" />
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </Section>
+            </div>
         </>
     )
 }

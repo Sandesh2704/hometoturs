@@ -22,22 +22,22 @@ export default function NavBar() {
     ];
 
     return (
-        <nav className="bg-white px-4 sm:px-7 md:px-10 lg:px-14 shadow mb-2">
-            <div className="flex justify-between items-center py-5  ">
+        <nav className="bg-white px-4 sm:px-7 md:px-10 lg:px-14 border-b border-[#011627] ">
+            <div className="flex justify-between items-center py-[15px]  ">
                 <div className="flex-shrink-0">
-                    <Link href="/" className="text-2xl font-semibold ">
-                        Home Tutors
+                    <Link href="/">
+                       <h1  className="text-2xl font-semibold "> Home Tutors</h1>
                     </Link>
                 </div>
 
                 <div className="hidden lg:flex items-center space-x-4">
                     {navItems.map((item) => (
-                        <Link key={item.name} href={item.href} className="text-[#000000BF] hover:text-secondary px-3 py-2 text-base font-medium">
+                        <Link key={item.name} href={item.href} className="text-[#000000BF] hover:text-secondary px-3 py-2 text-lg font-medium">
                             {item.name}
                         </Link>
                     ))}
                 </div>
-                <div className="flex items-center  space-x-4">
+                <div className="flex items-center  space-x-5">
                     <Link href="/signin" className='hidden md:flex'>
                         <Button title="Sign In" bgGreen={true} />
                     </Link>
@@ -52,7 +52,6 @@ export default function NavBar() {
                         </button>
                     </div>
                 </div>
-
             </div>
 
             {isOpen && (

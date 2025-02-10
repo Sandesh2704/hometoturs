@@ -2,29 +2,28 @@
 import Button from "@/components/Button";
 import SectionTitle from "@/components/SectionTitle";
 import Image from "next/image"
-import Paragraph from "@/components/Paragraph";
 import courses from "@/deta/courses";
 import Section from "@/components/Section";
 
 
 export default function Courses() {
     return (
-        <section className=" py-16 ">
+        <>
             <Section color='#F5F5F5'>
                 <div className="flex justify-center">
-                    <div className="w-96 text-center">
-                        <SectionTitle title="Meet our team of experts" black={true} />
+                    <div className="md:w-96 text-center">
+                        <SectionTitle title="Explore our most sought-after courses" black={true} />
                     </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-8 mt-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-[27pzṣṅ`r̥ṅṅḍśṣāḍṭḥḍṭṅṭṅṅṅṣ] mt-8">
                     {courses.map((items, index) => (
-                        <div className="relative rounded-2xl flex flex-col overflow-hidden w-full bg-white py-9  px-5 border border-[#011627]"
+                        <div className="relative rounded-3xl flex flex-col overflow-hidden w-full bg-white py-9  px-4 border border-[#011627]"
                             key={index}>
-                            <div className="flex flex-col lg:h-72">
-                                <span className="text-[#011627BF] font-normal text-base ">{items.instructor}</span>
-                                <div className="font-semibold text-2xl leading-9  mt-2">{items.title}</div>
-                                <p className="mt-4 text-lg leading-[1.7rem] text-gray-600"> {items.description}</p>
-                                <span className="text-5xl lg:text-6xl font-semibold border-text my-4">{items.instructor}</span>
+                            <div className="flex flex-col lg:h-[350px]">
+                                <span className="text-[#011627BF] font-medium text-xl ">{items.instructor}</span>
+                                <div className="font-semibold text-2xl leading-9 w-80 mt-2">{items.title}</div>
+                                <p className="mt-2 text-lg leading-[1.8rem] text-black/75"> {items.description}</p>
+                                <span className="text-5xl lg:text-6xl font-semibold border-text my-5">{items.instructor2}</span>
                             </div>
 
                             <div className="flex flex-col">
@@ -45,7 +44,7 @@ export default function Courses() {
                     ))}
                 </div>
             </Section>
-        </section>
+        </>
     );
 }
 

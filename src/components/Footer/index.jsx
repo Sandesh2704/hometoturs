@@ -12,11 +12,11 @@ import footerData from '@/deta/foterdeta';
 
 const FooterLinks = ({ title, links }) => (
   <div>
-    <h3 className="text-xl leading-[2.1rem] font-semibold mb-6">{title}</h3>
+    <h3 className="text-xl md:text-2xl leading-[2.1rem] font-semibold mb-6">{title}</h3>
     <ul className="space-y-4">
       {links.map((link) => (
         <li key={link.name}>
-          <Link href={link.href} className="text-gray-400 hover:text-white transition-colors text-base" target={link.newTab ? "_blank" : "_self"}>
+          <Link href={link.href} className="text-gray-400 hover:text-white transition-colors text-base md:text-xl" target={link.newTab ? "_blank" : "_self"}>
             {link.name}
           </Link>
         </li>
@@ -70,13 +70,13 @@ export default function Footer() {
 
           <div>
             <SectionTitle title="Stay updated by subscribing to our newsletter" />
-            <div className="mt-7 flex items-center border border-[#2EC4B6] rounded-full px-5 lg:px-10 py-4 ">
+            <div className="mt-8 flex items-center border border-[#2EC4B6] rounded-full px-5 lg:px-10 py-4 ">
               <input
                 type="email"
                 placeholder="jessicabrown@gmail.com"
                 className=" flex-grow tracking-wide bg-transparent outline-none pl-3 text-gray-400 placeholder-gray-400"
               />
-              <button className="ml-2 p-3 text-xl  rounded-full bg-[#2EC4B6] text-black hover:bg-cyan-500 focus:outline-none">
+              <button className="ml-2 p-3 text-xl md:text-2xl  rounded-full bg-[#2EC4B6] text-black hover:bg-cyan-500 focus:outline-none">
                 <RxArrowTopRight />
               </button>
 
@@ -91,7 +91,7 @@ export default function Footer() {
           <FooterLinks title={footerData.contact.title} links={footerData.contact.links} />
         </div>
         <div className="text-center pt-8">
-          <p className="text-gray-400 text-sm">Copyright@Hometutors</p>
+          <p className="text-gray-400 text-base">Copyright@Hometutors</p>
         </div>
         <div className=' absolute -top-44 -right-44 w-96 h-96 bg-[#2EC4B6] blur-[400px] ' />
         <div className=' absolute -bottom-48 -left-48 w-96 h-96 bg-[#2EC4B6] blur-[400px] ' />

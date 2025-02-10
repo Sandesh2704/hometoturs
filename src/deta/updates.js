@@ -1,4 +1,4 @@
-  const updates = [
+const updates = [
         {
             date: 'Dec 18th 2024',
             title: 'practical learning and problem-solving.',
@@ -22,4 +22,4 @@
         },
     ];
 
-    export default  updates
+export default  updates
