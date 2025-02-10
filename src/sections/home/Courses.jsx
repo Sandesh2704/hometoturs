@@ -15,7 +15,7 @@ export default function Courses() {
                         <SectionTitle title="Explore our most sought-after courses" black={true} />
                     </div>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-[27pzṣṅ`r̥ṅṅḍśṣāḍṭḥḍṭṅṭṅṅṅṣ] mt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-[27px] mt-8">
                     {courses.map((items, index) => (
                         <div className="relative rounded-3xl flex flex-col overflow-hidden w-full bg-white py-9  px-4 border border-[#011627]"
                             key={index}>

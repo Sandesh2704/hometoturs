@@ -17,7 +17,7 @@ export default function Updates() {
                         priority
                         src="/assests/blog/20d838ab647cce1ba4660b9888db145e.jpg"
                         alt="Wooden desk with typewriter"
-                        className="w-full h-[390px] rounded-t-3xl  relative z-0"
+                        className="w-full md:h-[390px] rounded-3xl md:rounded-t-3xl  relative z-0"
                     />
                     
                     <div className='hidden md:flex flex-col border border-white py-6 px-3'>
@@ -51,7 +51,7 @@ export default function Updates() {
                                     priority
                                     src="/assests/blog/3ffba104a65172e47c851115f0ea8450.jpg"
                                     alt="Desk setup"
-                                    className="w-full md:w-[327px]  md:h-[203px] px-2 object-cover rounded-3xl"
+                                    className="w-full md:w-[327px] h-full  md:h-[203px] px-2 object-cover rounded-3xl"
                                 />
                             </div>
                             <div className="md:flex-1">
