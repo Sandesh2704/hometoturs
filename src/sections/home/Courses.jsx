@@ -11,14 +11,20 @@ export default function Courses() {
         <>
             <Section color='#F5F5F5'>
                 <div className="flex justify-center">
-                    <div className="md:w-96 text-center">
+                    <div className="md:w-96 text-center"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-once="true">
                         <SectionTitle title="Explore our most sought-after courses" black={true} />
                     </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-[27px] mt-8">
                     {courses.map((items, index) => (
                         <div className="relative rounded-3xl flex flex-col overflow-hidden w-full bg-white py-9  px-4 border border-[#011627]"
-                            key={index}>
+                            key={index}
+                            data-aos="zoom-in"
+                            data-aos-delay={index * 200}
+                            data-aos-once="false">
                             <div className="flex flex-col lg:h-[350px]">
                                 <span className="text-[#011627BF] font-medium text-xl ">{items.instructor}</span>
                                 <div className="font-semibold text-2xl leading-9 w-80 mt-2">{items.title}</div>

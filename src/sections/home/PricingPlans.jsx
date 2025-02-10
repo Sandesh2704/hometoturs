@@ -1,24 +1,42 @@
-"use client"
+"use client";
 import { FaCheck } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
-import SectionTitle from '@/components/SectionTitle';
+import SectionTitle from "@/components/SectionTitle";
 import Section from "@/components/Section";
 import pricingPlans from "@/deta/pricing";
-
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const PricingPlans = () => {
+
   return (
     <Section>
-      <div className=' flex justify-center'>
-        <div className='sm:w-3/12 md:w-6/12 text-center'>
+      <div
+        className="flex justify-center"
+        data-aos="fade-down"
+        data-aos-duration="500"
+        data-aos-once="true" 
+      >
+        <div className="sm:w-3/12 md:w-6/12 text-center">
           <SectionTitle title="Find the perfect plan that fits your budget" black={true} balance={true} />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-8 lg:px-20 py-10 mt-2">
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-8 lg:px-20 py-10 mt-2"
+        data-aos="fade-up"
+        data-aos-duration="500"
+        data-aos-once="true"
+      >
         {pricingPlans.map((plan, index) => (
-          <PricingCard key={index} plan={plan} />
+          <div
+            key={index}
+            data-aos="zoom-in"
+            data-aos-delay={index * 200}
+            data-aos-once="true" 
+          >
+            <PricingCard plan={plan} />
+          </div>
         ))}
       </div>
     </Section>
@@ -26,7 +44,6 @@ const PricingPlans = () => {
 };
 
 export default PricingPlans;
-
 
 const PricingCard = ({ plan }) => {
   return (
