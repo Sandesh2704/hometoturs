@@ -10,11 +10,13 @@ export default function Updates() {
 
     return (
         <Section color="#011627">
+            <div className="overflow-hidden">
+          
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
                 <SectionTitle title="Latest Updates" />
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 mt-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 mt-12 ">
                 <div 
                     className="relative flex flex-col h-full overflow-hidden group"
                     data-aos="fade-up"
@@ -81,6 +83,7 @@ export default function Updates() {
                         </div>
                     ))}
                 </div>
+            </div>
             </div>
         </Section>
     );

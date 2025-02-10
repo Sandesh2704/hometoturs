@@ -51,7 +51,7 @@ export default function Testimonial() {
 
   return (
     <Section color="black">
-      <div className='py-2'>
+      <div className='py-2 overflow-hidden'>
         <div className="flex justify-center">
           <div className="w-full sm:w-[40rem] text-center"
             data-aos="fade-up"

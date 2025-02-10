@@ -10,7 +10,7 @@ export default function TeamSection() {
 
     return (
         <Section color="black">
-            <div className="py-4">
+            <div className="py-4 overflow-hidden">
 
                 <div className="flex justify-center" data-aos="fade-up">
                     <div className="w-96 text-center">

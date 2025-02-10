@@ -10,7 +10,7 @@ export default function Courses() {
     return (
         <>
             <Section color='#F5F5F5'>
-                <div className="flex justify-center">
+                <div className="flex justify-center overflow-hidden">
                     <div className="md:w-96 text-center"
                         data-aos="fade-up"
                         data-aos-duration="500"

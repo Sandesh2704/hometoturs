@@ -11,7 +11,7 @@ export default function ResponsiveHelp() {
     return (
         <>
             <Section>
-                <div className="py-7">
+                <div className="py-7 overflow-hidden">
                     <div className="flex justify-center w-full" data-aos="fade-up">
                         <SectionTitle title="How we can help you succeed" black={true} />
                     </div>

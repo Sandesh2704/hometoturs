@@ -167,7 +167,6 @@ export default function HeroSection() {
                             Elevate your child's learning experience with our professional home tuition services.
                         </h1>
 
-
                         <p 
                             className="text-lg lg:text-xl leading-[1.8rem] lg:leading-[2rem] font-normal text-[#0A0A0A]/75 mb-8"
                             data-aos="fade-up"
